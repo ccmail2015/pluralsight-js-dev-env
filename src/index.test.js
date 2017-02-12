@@ -13,7 +13,7 @@ describe('index.html', () => {
         const index = fs.readFileSync('./src/index.html', 'utf-8');
         jsdom.env(index, function(err, window){
             const h1 = window.document.getElementsByTagName('h1')[0];
-            expect("Hello World???").to.equal(h1.innerHTML);
+            expect("Hello World??").to.equal(h1.innerHTML);
             done();
             window.close();
         });
